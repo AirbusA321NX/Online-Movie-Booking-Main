@@ -425,3 +425,200 @@ for i in range(1, 101):
         continue  # it is a function telling that keep continue if the number gives remainder 0 with 3 and 5
 
     print(i)
+
+
+x = 3
+r = x % 2
+
+if r != 0:
+    print("ok")
+
+else:
+    print("even")
+    if x > 5:
+        print("yay")
+
+    else:
+        print("no")
+
+x = 99  # if user will give input it will give output as set by programmer
+
+if x == 1:
+    print("one")
+
+if x == 2:
+    print("two")
+
+if x == 4:
+    print("four")
+
+if x == 6:
+    print("six")
+
+else:
+    print(">:(")
+
+for j in range(4):
+    print("#", end="")  # you can print '#' 4 times in this manner
+
+print("\n")
+
+for j in range(4):
+    print("#", end="")
+
+    print("\n\n")
+# intro to for else
+
+# how to check whether number given to us in list are divisible by any number. Let say 5
+
+List = [1, 59, 11, 67]
+
+for List in List:
+
+    if List % 5 == 0:
+        print(List)
+
+
+else:
+    print("not found")
+
+# checking the number is prime using for else loop
+
+a = 7
+
+for i in range(2, a):  # it will check for all i in range 2 to a (user input)
+    if a % i == 0:
+        print("not prime")
+
+else:
+    print("prime")
+
+    # how to print an array  # array - they are containers which are able to store more than one item at the same time.
+
+    # 1.) blank array
+
+    from array import *
+
+arr = array('i', [])
+
+from array import *  # WARNING - DO NOT FORGET *
+
+vals = array('i', [1, 7, 4, 0, 8])
+
+print(vals)  # indentation error expected
+
+# how to reverse the array
+
+vals.reverse()  # do not forget ()
+print(vals)
+
+i: int
+for i in range(5):  # here 5 as there are 5 elements
+    print(vals[i])  # it will print the elements separately
+
+# Method 2 (more efficient)
+
+for j in range(len(vals)):
+    print(vals[i])
+
+# it works only for integer values not for characters , in order to use it
+
+char = array('u', ['o', 'i', 'a'])  # use '' in characters
+
+for e in char:
+    print(e)
+
+# how to create new array having same value of the earlier array
+
+newArr = array(vals.typecode, (a for a in vals))  # it is a for loop that prints everything one by one {in loop}
+print(newArr)
+
+# now using while loop (not recommended)
+
+i = 0
+while i > len(newArr):
+    print(newArr[i])
+    i = i + 1
+
+print("\n\n")
+import array
+
+arr = array.array('i', [])
+
+n = int(input("enter length of array"))
+
+for i in range(n):  # POSSIBLE CONFUSION - WHY CANNOT USE len(arr) instead of n
+    x = int(input("enter next value"))
+    arr.append(x)
+
+    print(arr)
+
+from numpy import *  # numpy is a package used to print  more multidimensional array
+
+arr = array([1, 2, 3, 4, 5], int)  # creating array in numpy
+print(arr.dtype)
+print(arr)
+
+# intro to matrix
+
+arr1 = array([
+    [1, 2, 3, 9, 0, 8],
+    [4, 5, 6, 2, 1, 7]
+
+])
+
+# functions related to Matrix
+
+print(arr1.dtype)  # it tells what type of input is in array.
+print(arr1.ndim)  # it tells how many  dimension is array
+print(arr1.shape)  # it tells how many rows and columns are there
+print(arr1.flatten())  # basically it will flat the matrix , typing all elements in one row
+print(arr1.reshape(3, 4))  # it reshapes the  matrix into 3 row and 4 column
+# noinspection PyUnreachableCode
+print(arr1.reshape(2, 2, 3))  # it will print 2 such arrays having 2 row 3 column noinspection PyUnreachableCode
+print(arr1.size)
+from numpy import *
+
+m = matrix('0 2 3 4 ; 4 5 6 7')
+print(m)
+print(diagonal(m))  # Prints Diagonal elements of the matrix .
+print(m.min())  # Print Minimum most value present inside matrices
+print(m.max())  # Prints Maximum most Value Present Inside Matrices
+
+m1 = matrix('1 , 2 , 3 ; 4 ,5 ,6 ; 7 , 8 , 9')
+m2 = matrix('6 , 5 , 4 ; 4 , 5 , 6 ; 4 , 5 ,9')
+
+m3 = m1 * m2
+print(m3)
+
+
+# Defining A Function
+
+def great():  # def is used to define the function
+    for i in range(2):
+        print("hi")
+        print("good morning")
+
+
+great() 
+
+
+def add(x, y):
+    x = int(input("enter 1st value"))
+    y = int(input("enter 2nd value"))
+    z = x + y
+    print(z)
+
+
+add(x, y)
+
+
+def add(x, y):
+    x = int(input("enter 1st value"))
+    y = int(input("enter 2nd value"))
+    z = x + y
+    return z
+
+
+result = add(x, y)  # here the return function will again fall back to code
+print(result)
