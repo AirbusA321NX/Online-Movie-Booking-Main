@@ -622,3 +622,169 @@ def add(x, y):
 
 result = add(x, y)  # here the return function will again fall back to code
 print(result)
+
+
+# here x and y are known as formal arguments
+# and when we are putting some value they are actual arguments - 1.Position
+#                                                                2.Keyword
+#                                                                3.Default
+#                                                                4.Variable Length
+
+# Features of Python
+
+# 1.Free And Open Source - it is freely available at the official website and source code is also available to the
+# public 2.Object-Oriented Language - Python supports object-oriented language and concepts of classes,
+# object encapsulation, etc.
+# 3.GUI Programming Support - Graphical User interfaces can be made using a module such as
+# PyQt5, PyQt4, wxPython, or Tk in Python. 4.Python is an Integrated language Python is also an Integrated language
+# because we can easily integrate Python with other languages like C, C++, etc.
+
+
+def cat(name, age, state):
+    print(name)
+    print(age)
+    for i, j, k in name, age, state:
+        print(i, j, k)
+
+    cat('Mau', 1, 'ohio')
+
+
+a = 1  # a is global variable
+
+
+def ohio():
+    a = 787  # this 'a' is a local variable (inside function)
+
+    print("inside function", a)
+
+
+ohio()
+
+print(a)
+
+# we can also change the local variable to global variable
+
+a = 1
+
+
+def ohio():
+    global a
+    a = 787
+
+    print("inside function", a)
+
+
+ohio()
+
+print(a)
+
+
+def count(k):
+    even = 0
+    odd = 0
+    for g in k:
+        if g % 2 == 0:
+            even += 1
+    else:
+        odd += 1
+
+    return even, odd
+
+
+k = [65, 98, 87, 100, 56]
+
+even, odd = count(k)
+print(even)
+print(odd)
+
+
+# Introduction to Fibonacci Series
+
+# example 1,1,2,3,5,8,13,21,34
+
+# nth , n+1 th are added to give n+3 th term
+
+def fib(n):
+    a = 0
+    b = 1
+
+    print(a)
+    print(b)
+
+
+for i in range(2, n):
+    c = a + b
+    a = b
+    b = c
+    print(c)
+fib(5)
+
+
+# How To Print Factorial of A Number
+
+
+def fact(n):
+    f = 1
+    for i in range(1, n + 1):
+        f = f * i
+
+        return f
+
+
+x = 4
+
+result = fact(x)
+
+print(result)
+
+import sys
+
+print(sys.getrecursionlimit())
+
+
+def Nezuko():
+    print("Tanziro")
+    Nezuko()
+
+
+# iT Will Print Tanziro infinitely/Function calls itself
+
+# We Call it Recursion
+
+# in order to get recursion limit (that how many the recursion took place)
+
+# now we can also set the recursion limit
+import sys
+
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
+
+
+def yo():
+    print("Tanziro")
+    yo()
+
+
+yo()
+
+i = 0
+
+
+def yo():
+    global i
+    i = i + 1
+    print("Tanziro", i)
+    yo()
+
+
+yo()
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+
+result = factorial(5)
+print(result)
