@@ -788,3 +788,12 @@ def factorial(n):
 
 result = factorial(5)
 print(result)
+
+
+f = lambda a: a * a  # lambda is basically defining the function anonymously.
+result = f(5)
+
+print(result)
+
+# Functions Are Object In Python
+
