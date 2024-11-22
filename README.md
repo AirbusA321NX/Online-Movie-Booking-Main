@@ -1,7 +1,2 @@
 # online-movie-booking
-I developed this project using Core PHP,HTML,JavaScript,CSS,Bootstrap.
-
-
-
-
-
+This project is  using Core PHP,HTML,JavaScript,CSS,Bootstrap.
