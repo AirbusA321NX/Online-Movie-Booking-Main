@@ -11,6 +11,5 @@ Features:
 4. payment method
 5. admin can Movie,Time,User etc. "add edit delete and select"
 6. admin can Manage the user and payment history
-7. Best Logical php code i
 
 
